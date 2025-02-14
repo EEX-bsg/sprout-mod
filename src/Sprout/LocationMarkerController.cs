@@ -26,8 +26,8 @@ namespace Sprout
         void Awake()
         {
             GE = GetComponent<GenericEntity>();
-            levelManager = GameObject.Find("SproutCustomeLevel").GetComponent<LevelManager>();
             sphereCollider = base.transform.GetComponentInChildren<SphereCollider>();
+            levelManager = GameObject.Find("SproutCustomeLevel").GetComponent<LevelManager>();
             levelManager.OnAssetLoaded += OnAssetLoaded;
             AddMapper();
         }
@@ -108,7 +108,7 @@ namespace Sprout
             LevelObject.transform.rotation = this.transform.rotation;
             LevelObject.transform.localScale = this.transform.localScale;
             LevelObject.transform.SetParent(this.transform.Find("Pointer"));
-            visualController.SetActive(false);
+            if(visualController) visualController.SetActive(false);
         }
         private void LoadButton_Toggled(bool flag)
         {

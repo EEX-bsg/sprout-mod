@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using Modding;
 using UnityEngine;
 using Sprout;
@@ -12,7 +12,6 @@ namespace Sprout
         public static string TmpDirPath = "tmp/";
         public static string TmpResourcesDirPath = TmpDirPath + "Resources/";
 
-        //���O�֌W
         public static void Log(string msg)
         {
             Debug.Log("Sprout:" + msg);

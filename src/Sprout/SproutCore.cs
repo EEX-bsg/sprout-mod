@@ -18,16 +18,15 @@ namespace Sprout
         {
             StartCoroutine(CheckVersion());//バージョン表示呼び出し
             SceneManager.activeSceneChanged += OnSceneChanged;
-            if(SceneManager.GetActiveScene().buildIndex == 11)//マルチプレイヤーシーン対策(シーンチェンジ後にmod起動される為)
+            if(SceneManager.GetActiveScene().name is "MasterSceneMultiplayer")//マルチプレイヤーシーン対策(シーンチェンジ後にmod起動される為)
             {
                 OnSceneChanged(SceneManager.GetActiveScene(), SceneManager.GetActiveScene());
             }
         }
         private void OnSceneChanged(Scene arg0, Scene arg1)
         {
-            Debug.Log("SceneChange");
             //レベルエディタ、マルチロビー、マルチの時に、SproutCustomLevelを生成
-            if (SceneManager.GetActiveScene().buildIndex == 11)
+            if (SceneManager.GetActiveScene().name is "MasterSceneMultiplayer")
             {
                 Debug.Log("Add SproutCustomLevel object");
                 SproutCustomLevel = GameObject.Find("SproutCustomeLevel");
