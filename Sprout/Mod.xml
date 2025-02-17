@@ -1,11 +1,9 @@
 <Mod>
     <Name>Sprout</Name>
     <Author>EEX-slime</Author>
-    <Version>0.2.5</Version>
+    <Version>0.2.6</Version>
 
-    <Description>
-Neo-CustomLevel mod
-    </Description>
+    <Description>Neo-CustomLevel mod</Description>
 
     <Icon name="icon" />
 
@@ -27,7 +25,7 @@ Neo-CustomLevel mod
     <Keys>
         <Key name="setting-ui-key" defaultModifier="LeftAlt" defaultTrigger="S" />
     </Keys>
-
+    <Resources>
         <Mesh name="none" path="none.obj" />
         <Mesh name="cube" path="cube.obj" />
         <Texture name="white_tex" path="white.png" />
